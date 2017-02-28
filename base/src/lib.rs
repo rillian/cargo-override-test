@@ -6,8 +6,9 @@ pub fn boom() -> u32 {
 #[cfg(test)]
 mod tests {
     #[test]
-    #[should_panic]
-    fn it_works() {
-        assert_eq!(0u32, ::boom());
+    #[should_panic(expected = "attempt to add with overflow")]
+    fn overflow_checking() {
+        let v = ::boom();
+        assert_eq!(0u32, v);
     }
 }
