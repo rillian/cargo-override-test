@@ -4,3 +4,6 @@ version = "0.1.0"
 authors = ["giles <giles@mozilla.com>"]
 
 [dependencies]
+
+[profile.release]
+debug-assertions = true
