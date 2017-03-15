@@ -1,0 +1,9 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+
+script:
+  - (cd base && cargo test --verbose)
+  - (cd base && cargo test --verbose --release)
